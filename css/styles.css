@@ -1,0 +1,1335 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background: #222;
+    color: #fff;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar .menu li {
+    margin: 0 1rem;
+  }
+  
+  .navbar .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .navbar .menu a:hover {
+    color: #f39c12;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    color: #222;
+  }
+  
+  .intro p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .intro .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .intro .btn:hover {
+    background: #e67e22;
+  }
+  
+  footer {
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  /* Estilos para a Seção Sobre Mim */
+#sobre {
+  background-color: #f4f4f4;
+  padding: 4rem 2rem;
+}
+
+.sobre-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#sobre h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+#sobre p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+#sobre strong {
+  color: #f39c12;
+}
+
+.skills {
+  margin-top: 2rem;
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  background: #f39d12a9;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 3px solid #f39c12;
+}
+
+/* Regras de Responsividade */
+@media (max-width: 768px) {
+  /* Ajuste do Cabeçalho */
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .menu li {
+    margin: 0.5rem 0;
+  }
+
+  /* Seção de Introdução */
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .intro .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Seção Sobre Mim */
+  #sobre {
+    padding: 2rem 1rem;
+  }
+
+  #sobre h2 {
+    font-size: 1.5rem;
+  }
+
+  #sobre p {
+    font-size: 0.9rem;
+  }
+
+  .skills ul li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Ajuste Geral */
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste do Cabeçalho */
+  .navbar .menu {
+    font-size: 0.9rem;
+  }
+
+  /* Seção de Introdução */
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro p {
+    font-size: 0.8rem;
+  }
+
+  .intro .btn {
+    font-size: 0.8rem;
+  }
+
+  /* Seção Sobre Mim */
+  #sobre h2 {
+    font-size: 1.2rem;
+  }
+
+  #sobre p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Estilos para a Seção Projetos */
+#projetos {
+  background-color: #fff;
+  padding: 4rem 2rem;
+}
+
+.projetos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#projetos h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#projetos p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+  cursor: pointer; /* Garante que o ponteiro mude para "mão" */
+}
+
+.card .btn:hover {
+  background: #e67e22;
+}
+
+/* Estilos para a Seção de Contato */
+#contato {
+  background-color: #f4f4f4;
+  padding: 4rem 2rem;
+}
+
+.contato-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contato h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#contato p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f39c12;
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+.btn {
+  background: #f39c12;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e67e22;
+}
+
+.social-links {
+  margin-top: 2rem;
+}
+
+.social-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #f39c12;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #e67e22;
+}
+
+/* Estilos para o Rodapé */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f39c12;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e67e22;
+}
+
+/* Transições suaves */
+a, button {
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Animação de Fade */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 4s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+#toggle-theme {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+#toggle-theme:hover {
+  color: #f39c12;
+}
+
+
+
+
+/* Dark Mode: Estilos Globais */
+body.dark-mode {
+  background-color: #121212; /* Fundo geral */
+  color: #f0f0f0; /* Texto padrão */
+}
+
+/* Aplicando o Dark Mode para Títulos e Parágrafos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p {
+  color: #f0f0f0 !important; /* Força o texto branco */
+}
+
+/* Cabeçalho no Dark Mode */
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #f0f0f0; /* Texto no cabeçalho */
+}
+
+body.dark-mode header h1,
+body.dark-mode header p {
+  color: #f0f0f0; /* Títulos e parágrafos no cabeçalho */
+}
+
+/* Links e Botões */
+body.dark-mode a {
+  color: #f39c12; /* Links em laranja */
+}
+
+body.dark-mode a:hover {
+  color: #e67e22; /* Destaque dos links ao passar o mouse */
+}
+
+body.dark-mode .btn {
+  background-color: #f39c12;
+  color: #f0f0f0; /* Texto branco nos botões */
+}
+
+body.dark-mode .btn:hover {
+  background-color: #e67e22;
+}
+
+/* Cards no Dark Mode */
+body.dark-mode .card {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0 !important; /* Texto branco nos cards */
+}
+
+body.dark-mode .card h3,
+body.dark-mode .card p {
+  color: #f0f0f0 !important; /* Texto branco nos cards */
+}
+
+/* Rodapé no Dark Mode */
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f0f0f0; /* Texto branco no rodapé */
+}
+
+body.dark-mode footer h1,
+body.dark-mode footer p {
+  color: #f0f0f0; /* Títulos e parágrafos no rodapé */
+}
+
+body.dark-mode footer a {
+  color: #f39c12; /* Links em laranja */
+}
+
+body.dark-mode footer a:hover {
+  color: #e67e22;
+}
+
+/* Seções no Dark Mode */
+body.dark-mode #home,
+body.dark-mode #sobre,
+body.dark-mode #projetos,
+body.dark-mode #contato {
+  background-color: #1e1e1e;
+  color: #f0f0f0; /* Texto branco */
+}
+
+/* Títulos e parágrafos nas seções */
+body.dark-mode #home h1,
+body.dark-mode #home h2,
+body.dark-mode #home p,
+body.dark-mode #sobre h1,
+body.dark-mode #sobre h2,
+body.dark-mode #sobre p,
+body.dark-mode #projetos h1,
+body.dark-mode #projetos h2,
+body.dark-mode #projetos p,
+body.dark-mode #contato h1,
+body.dark-mode #contato h2,
+body.dark-mode #contato p {
+  color: #f0f0f0 !important; /* Texto branco nas seções */
+}
+
+/* Destaques dentro das seções */
+body.dark-mode #sobre strong,
+body.dark-mode #projetos strong,
+body.dark-mode #contato strong {
+  color: #f39c12; /* Destaque em laranja */
+}
+
+/* Campos de Formulário no Dark Mode */
+body.dark-mode .contato-form label {
+  color: #f0f0f0 !important; /* Labels em formulário */
+}
+
+body.dark-mode .contato-form input,
+body.dark-mode .contato-form textarea {
+  background-color: #2a2a2a;
+  color: #f0f0f0; /* Texto branco nos campos */
+  border-color: #444;
+}
+
+body.dark-mode .contato-form input:focus,
+body.dark-mode .contato-form textarea:focus {
+  border-color: #f39c12; /* Destaque ao focar no campo */
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu a.active {
+  color: #f39c12;
+  font-weight: bold;
+  border-bottom: 2px solid #f39c12;
+}
+
+
+/* Configuração global da fonte */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* Para um texto mais leve */
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f39c12;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e67e22;
+}
+
+/* Ícones do Rodapé */
+.footer-icons {
+  margin-top: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+  color: #f39c12;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #e67e22;
+  transform: scale(1.2);
+}
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-icons {
+    margin-top: 1.5rem;
+  }
+
+  .footer-icons a {
+    font-size: 1.2rem;
+  }
+}
+.footer-icons {
+  margin-top: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 1rem;
+  color: #f39c12;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #e67e22;
+  transform: scale(1.2);
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #f39c12;
+  width: 0;
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+
+/* Cor dos textos no tema light */
+body:not(.dark-mode) h1,
+body:not(.dark-mode) p {
+  color: #000; /* Preto para o tema claro */
+}
+
+/* Navbar principal */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0; /* Remove o espaçamento lateral */
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo ajustada para iniciar no canto esquerdo */
+.logo {
+  font-size: 18px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #56ccf2, #2f80ed);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-left: 10px; /* Adicione margem mínima, se necessário */
+}
+
+/* Reset geral do body e html */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar principal */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* Remove qualquer espaçamento interno */
+  margin: 0; /* Remove qualquer margem externa */
+  background-color: #39393918; /* Cor do fundo do navbar */
+  position: fixed;
+  top: 0;
+  left: 0; /* Garante que comece do canto esquerdo */
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 18px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #56ccf2, #2f80ed);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0; /* Remove margem do logo */
+  padding: 10px 20px; /* Adiciona espaçamento interno controlado */
+}
+
+/* Menu de Navegação */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Itens do Menu */
+.nav-menu li {
+  margin: 0 10px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+/* Efeito hover no menu */
+.nav-menu li a:hover {
+  color: #56ccf2;
+}
+
+/* Botão de Alternar Tema */
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px; /* Espaçamento controlado na direita */
+}
+
+.btn {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #56ccf2;
+  color: #222;
+}
+
+/* Ícones Sociais */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  background: linear-gradient(90deg, #56ccf2, #2f80ed);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Navbar Responsivo */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Esconde o menu em telas menores */
+  }
+
+  .social-icons {
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+body:not(.dark-mode) .logo {
+  background: linear-gradient(90deg, #f39c12, #f1c40f); /* Gradiente amarelo */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/* Navbar - Tema Dark */
+body.dark-mode .nav-header {
+  background-color: #222; /* Fundo escuro no modo dark */
+}
+
+
+
+body.dark-mode .nav-menu li a,
+body.dark-mode .social-icons a,
+body.dark-mode .btn {
+  color: #fff; /* Cor branca */
+}
+
+body.dark-mode .nav-menu li a:hover,
+body.dark-mode .social-icons a:hover,
+body.dark-mode .btn:hover {
+  color: #56ccf2; /* Azul claro no hover */
+}
+
+/* Logo - Tema Light */
+body:not(.dark-mode) .logo {
+  background: linear-gradient(90deg, #f39c12, #f1c40f); /* Gradiente amarelo */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+Ícones Sociais - Tema Light
+body:not(.dark-mode) .social-icons a {
+  color: #f39c12; /* Cor laranja */
+}
+
+body:not(.dark-mode) .social-icons a:hover {
+  color: white; /* Tom mais escuro de laranja */
+}
+
+/* Efeitos Hover para Ícones no Tema Dark */
+body.dark-mode .social-icons a:hover {
+  transform: scale(1.1);
+  color: white; /* Branco no hover no modo dark */
+}
+
+/* Navbar Geral */
+.nav-header {
+  background-color: #222; /* Fundo escuro fixo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Social Icons Gerais */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s, opacity 0.3s;
+}
+
+
+/* Ícones Sociais - Tema Light */
+body:not(.dark-mode) .social-icons a {
+  color: #fff; /* Branco no tema light */
+  transition: transform 0.3s, color 0.3s; /* Suaviza as transições */
+}
+
+body:not(.dark-mode) .social-icons a:hover {
+  color: #f39c12; /* Laranja no hover no tema light */
+}
+
+/* Ícones Sociais - Tema Dark */
+body.dark-mode .social-icons a {
+  background: linear-gradient(90deg, #56ccf2, #2f80ed); /* Gradiente azul no tema dark */
+  -webkit-background-clip: text;
+  color: transparent; /* Aplica gradiente ao texto no modo dark */
+  transition: transform 0.3s, color 0.3s; /* Suaviza as transições */
+}
+
+body.dark-mode .social-icons a:hover {
+  color: white; /* Branco no hover no tema dark */
+  transform: scale(1.1); /* Aumenta o tamanho levemente no hover */
+}
+
+/* Social Icons Gerais */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 18px; /* Tamanho padrão dos ícones */
+  transition: transform 0.3s, color 0.3s, opacity 0.3s;
+}
+
+/* Navbar Geral com Transparência */
+.nav-header {
+  background-color: rgba(34, 34, 34, 0.85); /* Fundo escuro com 85% de opacidade */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px); 
+
+/* Transição suave ao rolar */
+.nav-header:hover {
+  background-color: rgba(34, 34, 34, 0.95); /* Fundo mais sólido ao passar o mouse */
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar Geral */
+.nav-header {
+  background-color: rgba(34, 34, 34, 0.85); /* Fundo escuro com leve transparência */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Efeito de desfoque */
+}
+
+/* Logo - Tema Light */
+body:not(.dark-mode) .logo {
+  background: linear-gradient(90deg, #f39c12, #f1c40f); /* Gradiente amarelo */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+/* Itens do Navbar - Tema Light */
+body:not(.dark-mode) .nav-menu li a,
+body:not(.dark-mode) .social-icons a,
+body:not(.dark-mode) .btn {
+  color: #f39c12; /* Laranja */
+}
+
+body:not(.dark-mode) .nav-menu li a:hover,
+body:not(.dark-mode) .social-icons a:hover,
+body:not(.dark-mode) .btn:hover {
+  color: #e67e22; /* Tom mais escuro de laranja */
+}
+
+
+/* Social Icons Gerais */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+}
+
+/* Navbar - Labels */
+.nav-header .nav-menu li a {
+  color: #f39c12; /* Laranja para ambos os temas */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-header .nav-menu li a:hover {
+  color: #e67e22; /* Laranja escuro no hover */
+}
+
+/* Ícones Sociais no Navbar */
+.nav-header .social-icons a {
+  color: #f39c12; /* Laranja para ambos os temas */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-header .social-icons a:hover {
+  color: #e67e22; /* Laranja escuro no hover */
+  transform: scale(1.1); /* Aumenta levemente no hover */
+}
+
+/* Botão de Alternar Tema */
+.nav-header .btn {
+  color: #f39c12; /* Laranja para ambos os temas */
+  border: 1px solid #f39c12;
+  background: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-header .btn:hover {
+  background: #e67e22; /* Fundo laranja escuro no hover */
+  color: white;
+}
+
+/* Cor específica para <p> no rodapé no tema light */
+body:not(.dark-mode) footer p {
+  color: #000; /* Cor preta para textos no rodapé no tema light */
+}
+
+
+/* Seção Inicial Geral */
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1e1e1e, #444);
+  color: white;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fundo Dinâmico */
+#home::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 1%);
+  background-size: 20px 20px;
+  animation: moveBackground 10s linear infinite;
+  z-index: 0;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+  animation: pulseBackground 5s infinite alternate;
+  z-index: 0;
+}
+
+/* Animações do Fundo */
+@keyframes moveBackground {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-20px) translateY(-20px);
+  }
+}
+
+@keyframes pulseBackground {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* Conteúdo Centralizado */
+.intro-container {
+  max-width: 1000px;
+  z-index: 1;
+}
+
+/* Título Principal */
+#home h1 {
+  font-size: 7rem; /* Tamanho aumentado */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  animation: titleZoomIn 2s ease forwards;
+}
+
+#home h1 .highlight {
+  background: linear-gradient(90deg, #f39c12, #f1c40f);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glowEffect 2s infinite alternate;
+}
+
+/* Subtítulo */
+#home p {
+  font-size: 3rem;
+  color: #ddd;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease forwards 0.5s;
+}
+
+/* Botão de Chamada para Ação */
+#home .btn {
+  display: inline-block;
+  padding: 1.8rem 3.5rem;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: bounce 2s infinite;
+}
+
+#home .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowEffect {
+  0% {
+    text-shadow: 0 0 20px #f39c12, 0 0 40px #f1c40f;
+  }
+  100% {
+    text-shadow: 0 0 40px #f1c40f, 0 0 60px #f39c12;
+  }
+}
+
+@keyframes titleZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 5rem;
+  }
+
+  #home p {
+    font-size: 2.5rem;
+  }
+
+  #home .btn {
+    font-size: 1.8rem;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 4rem;
+  }
+
+  #home p {
+    font-size: 2rem;
+  }
+
+  #home .btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
+
