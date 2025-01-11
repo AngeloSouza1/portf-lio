@@ -125,7 +125,7 @@
 }
 
 .skills ul li {
-  background: #f39d12a9;
+  background: #cc7f05;
   color: #fff;
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -224,14 +224,14 @@
 
 /* Estilos para a Seção Projetos */
 #projetos {
-  background-color: #fff;
+  background-color: #f9f9f9;
   padding: 4rem 2rem;
+  text-align: center;
 }
 
 .projetos-container {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
 #projetos h2 {
@@ -252,18 +252,23 @@
   gap: 2rem;
 }
 
-.card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para imagens nos cards */
+.project-image {
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 250px; /* Aumente a altura conforme necessário */
+  object-fit: cover; /* Garante que a imagem seja cortada proporcionalmente para caber */
+  border-bottom: 1px solid #ddd; /* Opcional: Adiciona uma linha divisória entre a imagem e o conteúdo */
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1; /* Ocupa o espaço disponível entre header e footer */
 }
 
 .card h3 {
@@ -278,7 +283,29 @@
   margin-bottom: 1rem;
 }
 
-.card .btn {
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card .btn:hover {
+  background: #e67e22;
+}
+
+.btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background: #f39c12;
@@ -287,12 +314,100 @@
   font-weight: bold;
   border-radius: 5px;
   transition: background 0.3s;
-  cursor: pointer; /* Garante que o ponteiro mude para "mão" */
+  pointer-events: auto; /* Garante que o botão seja clicável */
+  z-index: 10; /* Garante prioridade na pilha de camadas */
 }
 
-.card .btn:hover {
+.btn:hover {
   background: #e67e22;
 }
+
+.btn-secondary {
+  padding: 0.8rem 1.5rem;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #555;
+}
+
+/* Ícones de tecnologias no footer */
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tech-icons i {
+  font-size: 24px;
+  color: #02303f;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.tech-icons i:hover {
+  transform: scale(1.2);
+  color: #e67e22;
+}
+
+/* Links de projetos */
+.project-links {
+  display: flex;
+  justify-content: center;
+}
+
+.project-links .btn {
+  padding: 0.8rem 1.5rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+/* Estilo padrão do footer do card */
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #fff; /* Fundo branco no modo claro */
+  border-top: 1px solid #ddd;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Fundo no modo dark */
+body.dark-mode .card-footer {
+  background: #222; /* Fundo escuro no modo dark */
+  border-top: 1px solid #444; /* Bordas mais suaves no modo dark */
+  color: #f0f0f0; /* Texto claro no modo dark */
+}
+
+/* Ícones no modo dark */
+body.dark-mode .tech-icons i {
+  color: #56ccf2; /* Azul claro no modo dark */
+}
+
+body.dark-mode .tech-icons i:hover {
+  color: ##f39c12; 
+}
+
+/* Botão no modo dark */
+body.dark-mode .project-links .btn {
+  background: #cc7f05;
+  color: #f0f0f0; /* Texto claro */
+}
+
+body.dark-mode .project-links .btn:hover {
+  background: #333; /* Fundo mais escuro ao passar o mouse */
+}
+
 
 /* Estilos para a Seção de Contato */
 #contato {
@@ -646,11 +761,11 @@ html {
   scroll-behavior: smooth;
 }
 
-.menu a.active {
+/* .menu a.active {
   color: #f39c12;
   font-weight: bold;
   border-bottom: 2px solid #f39c12;
-}
+} */
 
 
 /* Configuração global da fonte */
@@ -1188,7 +1303,7 @@ body:not(.dark-mode) footer p {
   z-index: 0;
 }
 
-/* Animações do Fundo */
+/* Animações do Fundo
 @keyframes moveBackground {
   0% {
     transform: translateX(0) translateY(0);
@@ -1196,7 +1311,7 @@ body:not(.dark-mode) footer p {
   100% {
     transform: translateX(-20px) translateY(-20px);
   }
-}
+} */
 
 @keyframes pulseBackground {
   0% {
@@ -1332,4 +1447,295 @@ body:not(.dark-mode) footer p {
     padding: 1rem 2rem;
   }
 }
+
+.icon-container {
+  display: flex; /* Cria um layout flexível */
+  gap: 20px; /* Define o espaçamento entre os ícones */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Alinha os ícones verticalmente */
+}
+
+.icon-container i {
+  font-size: 24px; /* Define o tamanho dos ícones */
+  color: #333; /* Altere para a cor desejada */
+}
+
+.icon-container i:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+  transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+/* Swiper Container */
+.swiper-container {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Card Styling */
+.card {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-footer {
+  padding: 1rem;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-footer .tech-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.card-footer .project-links .btn {
+  background: #f39c12;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.card-footer .project-links .btn:hover {
+  background: #e67e22;
+}
+
+/* Swiper Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f39c12;
+}
+
+.swiper-pagination-bullet {
+  background: #f39c12;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e67e22;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .project-image {
+    height: 150px;
+  }
+}
+
+/* Estilo do Slider */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.slide {
+  flex: 0 0 80%; /* Cada slide ocupa 80% da largura do container */
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+/* Cards no Slider */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Altura das imagens */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Botões e Ícones */
+.project-links .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.8rem 1.5rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.project-links .btn:hover {
+  background: #e67e22;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-icons i {
+  font-size: 24px;
+  color: #f39c12;
+}
+
+
+/* Estilo da Seção Inicial */
+.intro {
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.intro-container {
+  max-width: 800px;
+  z-index: 1;
+}
+
+/* Destaques */
+.highlight {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Efeitos Fade e Pulse */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+/* Botão de Alternar Tema */
+#toggle-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem; /* Ajuste do tamanho do ícone */
+  cursor: pointer;
+  padding: 0.5rem; /* Espaçamento interno */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  border-radius: 50%; /* Forma arredondada */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#toggle-theme:hover {
+  color: #f39c12; /* Cor ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil no hover */
+}
+
+/* Ajustes para o Modo Claro */
+body:not(.dark-mode) #toggle-theme {
+  color: #333; /* Cor do botão no modo claro */
+}
+
+body:not(.dark-mode) #toggle-theme:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Fundo sutil no modo claro */
+}
+
+/* Centralização específica */
+.nav-header .right-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%; /* Certifique-se de que ocupa todo o espaço disponível */
+}
+
 

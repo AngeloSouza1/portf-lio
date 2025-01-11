@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Angelo Souza - Desenvolvedor Back-End">
-  <title>Portfólio | Angelo Souza</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-  <!-- Link para o CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Fonte do Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-
-
-
-</head>
+  <head>
+    <!-- Configurações básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Portfólio de Angelo Souza - Desenvolvedor Back-End apaixonado por criar soluções inovadoras.">
+    <meta name="keywords" content="Desenvolvedor Back-End, Ruby on Rails, Python, Portfólio, Angelo Souza">
+    <meta name="author" content="Angelo Souza">
+  
+    <!-- Meta Tags para Redes Sociais (Open Graph) -->
+    <meta property="og:title" content="Portfólio | Angelo Souza">
+    <meta property="og:description" content="Desenvolvedor Back-End focado em tecnologias como Ruby on Rails, Python e PostgreSQL.">
+    <meta property="og:image" content="assets/images/profile.jpeg">
+    <meta property="og:url" content="https://seu-site.com">
+    <meta property="og:type" content="website">
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <title>Portfólio | Angelo Souza</title>
+  </head>
+  
 <body>
    <!-- Indicador de Rolagem -->
    <div id="progress-bar"></div>
@@ -43,7 +54,7 @@
 <div class="right-actions">
   <div class="social-icons">
     <a href="https://github.com/AngeloSouza1" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/angelosouza" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.linkedin.com/in/angeloafsouza" target="_blank"><i class="fab fa-linkedin"></i></a>
     <a href="mailto:angeloafdesouza@gmail.com"><i class="fas fa-envelope"></i></a>
   </div>
   <button id="toggle-theme" class="btn">🌙</button>
@@ -73,12 +84,10 @@
   </section>
   
   
-  
-
     <!-- Seção Sobre Mim -->
     <section id="sobre">
       <div class="sobre-container">
-        <h2>Sobre Mim</h2>
+        <br><br>
         <img src="assets/images/profile.jpeg" alt="Angelo Souza" class="perfil">
         <p>
           Sou <strong>Angelo Souza</strong>, um desenvolvedor <strong>Back-End</strong> apaixonado por criar soluções robustas e eficientes. 
@@ -122,87 +131,194 @@
 
     </section>
     
-    <!-- Seção Projetos -->
-    <section id="projetos">
-      <div class="projetos-container">
-        <h2>Meus Projetos</h2>
-        <p>Confira alguns dos trabalhos que desenvolvi como Back-End Developer:</p>
-        <div class="projetos-grid">
-          <!-- Card do Projeto 1 -->
-          <div class="card">
-            <h3>Amigo-Secreto-OBC</h3>
-            <p>Aplicação web em React e Flask para sorteio de amigo oculto, com registro de participantes, envio de e-mails e interface intuitiva.</p>
-            <a href="https://github.com/AngeloSouza1/Amigo-Secreto-OBC" target="_blank" class="btn">Ver no GitHub</a>
-          </div>
-          <!-- Card do Projeto 2 -->
-          <div class="card">
-            <h3>Projeto 2</h3>
-            <p>Descrição breve do projeto, destacando funcionalidades e tecnologias usadas.</p>
-            <a href="https://github.com/AngeloSouza1/projeto2" target="_blank" class="btn">Ver no GitHub</a>
-          </div>
-          <!-- Card do Projeto 3 -->
-          <div class="card">
-            <h3>Projeto 3</h3>
-            <p>Descrição breve do projeto, destacando funcionalidades e tecnologias usadas.</p>
-            <a href="https://github.com/AngeloSouza1/projeto3" target="_blank" class="btn">Ver no GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+<!-- Fim da Seção Sobre Mim -->
+ 
+   <!-- Seção Projetos -->
+<section id="projetos">
+  <div class="projetos-container">
+ <br><br>
+    <p>Confira alguns dos trabalhos que desenvolvi como Back-End Developer:</p>
 
-    <!-- Seção Contato -->
-    <section id="contato">
-      <div class="contato-container">
-        <h2>Entre em Contato</h2>
-        <p>Fique à vontade para enviar uma mensagem ou conectar-se comigo nas redes sociais.</p>
-        <form action="https://formsubmit.co/angeloafdesouza@gmail.com" method="POST" class="contato-form">
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <!-- Grade de Projetos -->
+    <div class="projetos-grid">
+
+      <!-- Card do Projeto 1 -->
+      <div class="card">
+        <img src="assets/images/projeto1.webp" alt="Amigo-Secreto-OBC" class="project-image">
+        <div class="card-content">
+          <h3>Amigo-Secreto-OBC</h3>
+          <p>Aplicação web em React e Flask para sorteio de amigo oculto, com registro de participantes, envio de e-mails e interface intuitiva.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tech-icons">
+            <i class="fab fa-react" title="React"></i>
+            <i class="fab fa-python" title="Python"></i>
+            <i class="fas fa-database" title="PostgreSQL"></i>
           </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          <div class="project-links">
+            <a href="https://github.com/AngeloSouza1/Amigo-Secreto-OBC" target="_blank" class="btn">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
           </div>
-          <div class="form-group">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn">Enviar Mensagem</button>
-        </form>
-        <div class="social-links">
-          <a href="https://github.com/AngeloSouza1" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/angeloafsouza" target="_blank">LinkedIn</a>
-          <a href="mailto:angeloafdesouza@gmail.com">E-mail</a>
         </div>
       </div>
-    </section>
+
+      <!-- Card do Projeto 2 -->
+      <div class="card">
+        <img src="assets/images/projeto2.webp" alt="WhatAutomat" class="project-image">
+        <div class="card-content">
+          <h3>WhatAutomat</h3>
+          <p>Ferramenta para envio automatizado de mensagens no WhatsApp usando Node.js, Puppeteer e APIs.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tech-icons">
+            <i class="fab fa-node-js" title="Node.js"></i>
+            <i class="fab fa-js" title="JavaScript"></i>
+            <i class="fas fa-robot" title="Puppeteer"></i>
+            <i class="fas fa-cloud" title="API Integration"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AngeloSouza1/WhatAutomat" target="_blank" class="btn">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card do Projeto 3 -->
+      <div class="card">
+        <img src="assets/images/projeto3.webp" alt="Pagamento-Gateway" class="project-image">
+        <div class="card-content">
+          <h3>Pagamento-Gateway</h3>
+          <p>Integração de gateway de pagamento com suporte a múltiplos provedores, utilizando Node.js e APIs REST.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tech-icons">
+            <i class="fab fa-node-js" title="Node.js"></i>
+            <i class="fas fa-dollar-sign" title="Pagamentos"></i>
+            <i class="fas fa-cloud" title="API Integration"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AngeloSouza1/Pagamento-Gateway" target="_blank" class="btn">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card do Projeto 4 -->
+      <div class="card">
+        <img src="assets/images/projeto4.webp" alt="PDF Protector" class="project-image">
+        <div class="card-content">
+          <h3>PDF Protector</h3>
+          <p>Ferramenta para proteger documentos PDF com senha, utilizando Python e bibliotecas de segurança para arquivos.</p>
+        </div>
+        <div class="card-footer">
+          <div class="tech-icons">
+            <i class="fab fa-python" title="Python"></i>
+            <i class="fas fa-lock" title="Segurança"></i>
+            <i class="fas fa-file-pdf" title="PDF"></i>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AngeloSouza1/PDF_Protector" target="_blank" class="btn">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card do Projeto 5 -->
+        <div class="card">
+          <img src="assets/images/projeto5.webp" alt="PDF Protector" class="project-image">
+          <div class="card-content">
+            <h3>Pagamento-Gateway</h3>
+          <p>Sistema de integração de gateway de pagamento com suporte a múltiplos provedores, utilizando Node.js e APIs REST.</p>
+          </div>
+          <div class="card-footer">
+            <div class="tech-icons">
+              <i class="fab fa-node-js" title="Node.js"></i>
+              <i class="fas fa-dollar-sign" title="Pagamentos"></i>
+              <i class="fas fa-cloud" title="APIs REST"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/AngeloSouza1/Pagamento-Gateway" target="_blank" class="btn">
+              <i class="fab fa-github"></i> Ver no GitHub
+              </a>
+            </div>
+          </div>
+        </div>        
+
+
+        <!-- Card do Projeto 6 -->
+        <div class="card">
+          <img src="assets/images/projeto6.webp" alt="PDF Protector" class="project-image">
+          <div class="card-content">
+            <h3>QuizApp</h3>
+          <p>Aplicação de quizzes interativos construída com Ruby on Rails, incluindo pontuação, rankings e gerenciamento de usuários.</p>
+          </div>
+          <div class="card-footer">
+            <div class="tech-icons">
+              <i class="fab fa-rails" title="Ruby on Rails"></i>
+              <i class="fas fa-users" title="Gerenciamento de Usuários"></i>
+              <i class="fas fa-chart-line" title="Ranking e Estatísticas"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/AngeloSouza1/QuizApp" target="_blank" class="btn">
+              <i class="fab fa-github"></i> Ver no GitHub
+              </a>
+            </div>
+          </div>
+        </div>    
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section id="contato">
+  <div class="contato-container">
+    <h2>Entre em Contato</h2>
+    <p>Conecte-se comigo através das redes sociais ou envie um e-mail diretamente:</p>
     
+    <!-- Links de Contato -->
+    <div class="social-links">
+      <a href="https://github.com/AngeloSouza1" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/angeloafsouza" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="mailto:angeloafdesouza@gmail.com">
+        <i class="fas fa-envelope"></i> Enviar E-mail
+      </a>
+    </div>
+  </div>
 
   <!-- Rodapé -->
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2024 Angelo Souza - Todos os direitos reservados.</p>
-      <ul class="footer-links">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <p>
-        Desenvolvido com 💻 e muita <span style="color: #f39c12;">paixão</span>.
-      </p>
-      <div class="footer-icons">
-        <a href="https://github.com/AngeloSouza1" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/angelosouza" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:angeloafdesouza@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div<nav class="nav-header">
-      <!-- Logo -->
-      <div class="logo">Angelo Souza</div>
-  </footer>
-  
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Angelo Souza - Todos os direitos reservados.</p>
+    <ul class="footer-links">
+      <li><a href="#home">Início</a></li>
+      <li><a href="#sobre">Sobre Mim</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <p>Desenvolvido com 💻 e muita <span style="color: #f39c12;">paixão</span>.</p>
+    <!-- <div class="footer-icons">
+      <a href="https://github.com/AngeloSouza1" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/angeloafsouza" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:angeloafdesouza@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div> -->
+  </div>
+</footer>
+</section>
+
+
   
   <!-- Script JS -->
   <script src="js/scripts.js"></script>
